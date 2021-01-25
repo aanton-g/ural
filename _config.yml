@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: ООО "Урал-Трейд"
-email: anton.gara89@gmail.com
+email: anton.g@ramotion.agency
 description: >- # this means to ignore newlines until "baseurl:"
   Cпециализированная (поверенная) организация Территориального управления Росимущества по продаже арестованного имущества
 baseurl: "/" # the subpath of your site if applicable, e.g. /blog
