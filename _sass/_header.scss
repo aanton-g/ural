@@ -1,0 +1,49 @@
+header {
+    padding: 25px 0;
+    
+    nav {
+        @include wrap;
+        display: flex;
+        justify-content: space-between;
+
+        @include media('<tablet') {
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        ul {
+            margin: 0;
+            list-style: none;
+            display: flex;
+
+            @include media('<tablet') {
+                padding: 0;
+            }
+
+            li {
+                &:not(:last-child) {
+                    margin: 0 25px 0 0;
+                }
+
+                @include media('<tablet') {
+                    &:not(:last-child) {
+                        margin: 0 15px 0 0;
+                    }
+                }
+            }
+
+            a {
+                @include text(18px, 18px);
+                font-weight: bold;
+                text-decoration: none;
+                color: $text;
+                vertical-align: center;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}

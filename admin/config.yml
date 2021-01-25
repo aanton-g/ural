@@ -14,23 +14,25 @@ collections: # A list of collections the CMS should be able to edit
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "_posts" # The path to the folder where the documents are stored
-    sort: "date:desc" # Default is title:asc
+    sort: "title:asc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
-      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Meta Description", name: "meta_description", widget: "string", required: false}
-      - label: "Author"
-        name: "author"
-        widget: "select"
-        options:
-          - { label: "Dan Urbanowicz", value: "dan_urbanowicz" }
-          - { label: "John Doe", value: "john_doe" }
-      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss"}
-      - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}
-      - {label: "Body", name: "body", widget: "markdown", required: false}
-      - {label: "Categories", name: "categories", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Name", name: "name", widget: "string", tagname: "h1"}
+      - label: "Список"
+        name: "docs"
+        widget: "list"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Текст", name: "text", widget: "markdown", required: false}
+          - label: Документы
+            name: files
+            widget: list
+            fields: 
+              - {label: "File name", name: "title", widget: "string"}
+              - {label: "File", name: "file", widget: "file"}
     # PAGES
   - name: "page"
     label: "Page"
@@ -41,7 +43,6 @@ collections: # A list of collections the CMS should be able to edit
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Meta Description", name: "meta_description", widget: "string", required: false}
       - {label: "Permalink", name: "permalink", widget: "hidden"}
       - {label: "Section", name: "section", widget: "hidden", default: "{{name}}"}
       - {label: "Intro Paragraph", name: "intro_paragraph", widget: "markdown", required: false}

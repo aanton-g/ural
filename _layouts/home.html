@@ -1,23 +1,22 @@
 ---
 layout: default
 ---
+<section class="home">
+    <h2>{{ page.title }}</h2>
 
-<h2>{{ page.title }}</h2>
+    {% include page-intro.html %}
 
-  {% include page-intro.html %}
+    {{ content }}
 
-  {{ content }}
+    <div class="home__menu">
+        <h4>Выберите регион:</h4>
 
-  <section>
-
-    <h3>Recent posts from the blog</h3>
-
-    <ul>
-      {% for post in site.posts limit:3 %}
-        <li>
-          <a href="{{ post.url }}">{{ post.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-
-  </section>
+        <ul>
+          {% for post in site.posts limit:3 %}
+            <li>
+              <a href="{{ post.url }}">{{ post.name }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+    </div>
+</section>

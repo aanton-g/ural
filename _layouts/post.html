@@ -1,34 +1,25 @@
 ---
 layout: default
 ---
-{% assign author = site.data.authors[page.author] %}
+<div class="home post">
+    <h2>{{ page.name }}</h2>
 
-<h2>{{ page.title }}</h2>
+    <ul>
+        {% for item in page.docs %}      
+        <li>
+            {{ item.title }}
 
-<time datetime="{{ page.date }}">
-  <small>
-    <strong>{{ page.date | date_to_string }}</strong>
-    {% if author %}
-      by {{ author.name }}
-    {% endif %}
-  </small>
-</time>
+            <div class="info">
+                {{ item.text | markdownify }}
 
-{% include page-intro.html %}
-
-{{ content }}
-
-<nav aria-label="Adjacent Posts">
-  <ul>
-    {% if page.previous.url %}
-      <li>
-        <a href="{{page.previous.url}}" rel="prev">&laquo; {{page.previous.title}}</a>
-      </li>
-    {% endif %}
-    {% if page.next.url %}
-      <li>
-        <a href="{{page.next.url}}" rel="next">{{page.next.title}} &raquo;</a>
-      </li>
-    {% endif %}
-  </ul>
-</nav>
+                <ul>
+                    {% for file in item.files %}
+                    <li><a href="{{ file.file }}" download="file">{{ file.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            
+        </li>
+        {% endfor %}
+    </ul>
+</div>

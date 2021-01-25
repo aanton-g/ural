@@ -1,15 +1,23 @@
 ---
 layout: contact
-title: Contact
+title: Контакты
 permalink: /contact
 section: contact
-intro_paragraph: |-
-
-  The contact form on this page uses
-  [Netlify Forms](https://www.netlify.com/docs/form-handling/) to process
-  submissions, and saves them in your Netlify account where you can optionally
-  set up notifications. Each submission is passed through a spam filter and if
-  flagged, will display a CAPTCHA challenge to the user.
+intro_paragraph: ''
 ---
-
-**Send us a message**
+|||
+|---------------------|-----------------------------------------------------|
+|Полное наименование  | Общество с ограниченной ответственностью  «АРНАЛ»   |
+|Краткое наименование | ООО «АРНАЛ» |
+|Регистрационные данные:||
+|ИНН/КПП |5904342624 / 590301001 |
+|ОГРН|	1165958110670|
+|ОКПО|	05169519|
+|ОКАТО|	57701000|
+|Юридический адрес|	614046, г. Пермь, ул.Барамзиной, д.54, этаж 2|
+|Фактический адрес|	614046, г. Пермь, ул.Барамзиной, д.54, этаж 2|
+|Директор|	Абибуллаев Эльдар Серверович действует на основании Устава |
+|E-mail|	arnalperm@bk.ru|
+|Контактные телефоны|	+7(342)256-56-01|
+|Банковские реквизиты:| Р/счет 40702810249770028316 
+||К/счет 30101810900000000603 БИК 042202603 Волго –Вятский банк Сбербанк|

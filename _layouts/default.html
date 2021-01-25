@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html data-current="{{ page.section }}" lang="en">
+<html data-current="{{ page.section }}" lang="ru">
 
   {% include head.html %}
 
@@ -11,14 +11,15 @@ layout: compress
 
     {% include header.html %}
 
-    <main>
+    <main class="main">
 
-      {{ content }}
+      <div class="main__content">
+          {{ content }}
+      </div>
 
     </main>
 
     {% include footer.html %}
-
   </body>
 
 </html>

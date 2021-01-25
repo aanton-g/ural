@@ -1,11 +1,117 @@
-@charset "utf-8";
+@import "vars";
 
-@import
-  "partials/fonts",
-  "partials/variables",
-  "partials/mixins",
-  "partials/normalize",
-  "partials/utilities",
-  "partials/typography",
-  "partials/app"
-;
+// section
+@import "header";
+@import "content";
+
+* {
+    border: none;
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    /* stylelint-disable */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    /* stylelint-enable */
+}
+
+body {
+	font-size: 16px;
+	min-width: 360px;
+	position: relative;
+	line-height: 1.25;
+	font-family: $mont;
+	overflow-x: hidden;
+	color: $text;
+	min-height: 100vh;
+	display: flex;
+  flex-direction: column;
+  background-image: url(/assets/img/uploads/main.jpg);
+  background-size: cover;
+}
+
+header,
+footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+img {
+  object-fit: cover;
+  max-width: 400px;
+
+  @include media('<tablet') {
+    max-width: 100%;
+  }
+}
+
+h2 {
+  @include text(38px, 1.25);
+  font-family: $mont-alt;
+  margin-bottom: 30px;
+
+  @include media('<tablet') {
+    @include text(33px, 1.25);
+  }
+}
+
+h3 {
+  @include text(30px, 1.25);
+  font-family: $mont-alt;
+  margin-bottom: 15px;
+
+  @include media('<tablet') {
+    @include text(25px, 1.25);
+  }
+}
+
+h4 {
+  @include text(24px, 1.25);
+  font-family: $mont-alt;
+  margin-bottom: 15px;
+
+  @include media('<tablet') {
+    @include text(21px, 1.25);
+  }
+}
+
+p {
+  @include text(17px, 1.5);
+  margin-bottom: 15px;
+}
+
+table {
+  td {
+    padding: 5px;
+
+    @include media('<tablet') {
+      @include text(14px, 1.25);
+      padding: 2px;
+    }
+  }
+}
+
+ul,
+ol {
+  padding-left: 20px;
+  margin-bottom: 20px;
+
+  li {
+    @include text(17px, 1.5);
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+}
+
+a {
+  @include text(17px, 27px, 0);
+  color: $accent;
+  font-weight: 600;
+  text-decoration: none;
+}

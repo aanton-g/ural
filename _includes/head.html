@@ -1,16 +1,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% if page.section == "home" %}
-    <title>{{ site.title }}</title>
-    <meta name="description" content="{{ site.description }}">
-  {% else %}
-    <title>{{ page.title }}</title>
-    {% if page.meta_description %}
-      <meta name="description" content="{{ page.meta_description }}">
-    {% endif %}
-  {% endif %}
+  <title>{% if page.section == "home" %}{{ site.title }}{% else %}{{ page.name | default: site.title }}{% endif %}</title>
+	<base href="{{ site.baseurl }}">
+  <meta name="description" content="{{ site.description }}">
+  <meta name="yandex-verification" content="19051c552d99cef7" />
+  <meta name="google-site-verification" content="kRF4JEFUcuV3kWnZNhqnwRc6zni9MlM1tDqXea6qQ4E" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:300,400,500,600,700|Montserrat:300,400,500,600,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <script src="/assets/main.js"></script>
   {% if jekyll.environment == 'production' and site.analytics %}
     {% include analytics.html %}
   {% endif %}
