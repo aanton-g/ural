@@ -1,7 +1,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.section == "home" %}{{ site.title }}{% else %}{{ page.name | default: site.title }}{% endif %}</title>
+  <title>{% if page.section == "home" %}{{ site.title }}{% else %}{{ page.title | default: site.title }}{% endif %}</title>
 	<base href="{{ site.baseurl }}">
   <meta name="description" content="{{ site.description }}">
   <meta name="yandex-verification" content="447a0a05f85f88ac" />
