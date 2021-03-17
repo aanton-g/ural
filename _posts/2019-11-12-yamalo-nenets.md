@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Торги
-name: Торги
+title: yamalo-nenets
+name: Ямало-Ненецкий автономный округ
 docs:
-  - title: Первый пункт
+  - title: Торги
     files:
       - file: /assets/img/uploads/weekend_activities__going_to-2.doc
         title: Пробный файл
     text: Описание
-  - title: Второй пункт
+  - title: Комиссионная продажа
     text: Описание
     files:
       - title: Пробное фото
