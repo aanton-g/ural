@@ -70,8 +70,6 @@ docs:
   - title: Фото предметов ареста
     text: ""
     files:
-      - file: /assets/img/uploads/16-03-2021_13-01-13.zip
-        title: Фото должника Бронникова
       - file: /assets/img/uploads/фото-ниссан-альмера.zip
         title: Фото ниссан(комиссия)
       - file: /assets/img/uploads/ув.180-ч.1.tif
